@@ -1,0 +1,216 @@
+.logo {
+  margin: 0;
+  padding: 10px;
+  width: 140px;
+}
+
+.logo svg {
+  width: inherit;
+  height: inherit;
+}
+
+.productImage {
+  margin: 0;
+}
+
+.productImage img {
+  max-width: 100%;
+}
+
+.productContents {
+  padding: 0 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px 0;
+}
+
+.productContents .brand {
+  font-size: 12px;
+}
+
+.productContents .name {
+  font-size: 16px;
+}
+
+.productContents .price {
+  font-size: 14px;
+}
+
+.lists {
+  margin: 20px 0 0;
+  padding: 0 20px;
+}
+
+.items {
+  padding: 10px 0;
+  border-top: 1px solid #eee;
+}
+
+.contents {
+  display: flex;
+  align-items: center;
+  gap: 0 20px;
+}
+
+.contents .product {
+  width: 100%;
+  flex: 1;
+}
+
+.text {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  font-size: 14px;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  word-break: break-all;
+}
+
+.text.fold {
+  display: block;
+}
+
+.author {
+  color: #858585;
+  font-size: 12px;
+}
+.date {
+  color: #c2c2c2;
+  font-size: 12px;
+}
+.productName {
+  margin: 5px 0;
+  color: #858585;
+  font-size: 12px;
+}
+
+.badge {
+  padding: 2px 4px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0 4px;
+  color: #fff;
+  font-size: 12px;
+  background: #80c342;
+  border-radius: 10px;
+}
+
+.badge em {
+  padding: 2px 4px;
+  height: 10px;
+  color: #80c342;
+  font-style: normal;
+  font-size: 10px;
+  background: #fff;
+  border-radius: 8px;
+}
+
+.badge.animated em {
+  animation: badgeRotate 1s alternate infinite;
+}
+
+@-webkit-keyframes badgeRotate {
+  0% {
+      transform: rotateX(90deg);
+  }
+  100% {
+      transform: rotateX(90deg);
+  }        
+  50% {
+      transform: rotateX(90deg);
+  }
+  to {
+      transform: rotateX(0deg);
+  }
+}
+.contents .thumbnail {
+  width: 88px;
+  height: 88px;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.thumbnail a {
+  display: block;
+  width: inherit;
+  height: inherit;
+}
+
+.thumbnail img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  overflow: hidden;
+}
+
+.more {
+  color: #000;
+  font-size: 12px;
+}
+
+
+.modalThumbnail {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #fff;
+}
+
+.modalThumbnail.open {
+  display: block;
+}
+
+.modalThumbnail .head {
+  position: relative;
+  padding: 20px 0;
+}
+
+.modalThumbnail .head strong {
+  display: block;
+  font-size: 16px;
+  text-align: center;
+}
+
+.modalThumbnail .head .modalClose {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 30px;
+  height: 30px;
+}
+
+.buttonWrap {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  display: flex;
+}
+.buttonWrap button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 40px;
+  font-size: 14px;
+  font-weight: bold;
+  border: none;
+}
+.buttonWrap .present {
+  color: #80c342;
+  background: #fff;
+  border-top: 1px solid #80c342;
+}
+
+.buttonWrap .buy {
+  color: #fff;
+  background: #80c342;
+}
