@@ -1,0 +1,270 @@
+
+/**
+ * @author 김 민
+ */
+
+.information {
+    position: relative;
+    min-width: 320px;
+    max-width: 320px;
+    background: var(--black);
+    transition: all 0.5s cubic-bezier(.4,.25,.3,1);
+    -webkit-transition: all 0.5s cubic-bezier(.4,.25,.3,1);
+    -moz-transition: all 0.5s cubic-bezier(.4,.25,.3,1);
+    -ms-transition: all 0.5s cubic-bezier(.4,.25,.3,1);
+    -o-transition: all 0.5s cubic-bezier(.4,.25,.3,1);
+}
+
+#information {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+#information header {
+    flex: 1;
+}
+
+.information.isFold {
+    min-width: 100px;
+    max-width: 100px;
+    border-right: 2px solid var(--black);
+    background: var(--background);
+}
+
+.information.isFold .about,
+.information.isFold .avatar,
+.information.isFold .title p,
+.information.isFold footer {
+    display: none;
+}
+
+.information.isFold .title {
+    padding: 20px;
+}
+
+.information.isFold .title h1 {
+    width: 60px;
+    height: 60px;
+    background: url(/public/favicon.ico) center no-repeat;
+    font-size: 0;
+    position: static;
+}
+
+.information .btnFold {
+    position: absolute;
+    right: -12px;
+    top: 100px;
+    opacity: 0;
+    z-index: 1;
+    transition: all 0.3s cubic-bezier(.4,.25,.3,1);
+    -webkit-transition: all 0.3s cubic-bezier(.4,.25,.3,1);
+    -moz-transition: all 0.3s cubic-bezier(.4,.25,.3,1);
+    -ms-transition: all 0.3s cubic-bezier(.4,.25,.3,1);
+    -o-transition: all 0.3s cubic-bezier(.4,.25,.3,1);
+}
+
+.information:hover .btnFold {
+    opacity: 1;
+}
+
+.information .btnFold span {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 25px;
+    height: 25px;
+    background: var(--white);
+    border: 1px solid var(--background);
+    border-radius: 100%;
+    -webkit-border-radius: 100%;
+    -moz-border-radius: 100%;
+    -ms-border-radius: 100%;
+    -o-border-radius: 100%;
+    box-sizing: border-box;
+}
+
+.information .btnFold span::before {
+    content: "";
+    margin-left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 6px;
+    height: 6px;
+    border-top: 2px solid var(--black);
+    border-right: 2px solid var(--black);
+    transform: rotate(225deg);
+    -webkit-transform: rotate(225deg);
+    -moz-transform: rotate(225deg);
+    -ms-transform: rotate(225deg);
+    -o-transform: rotate(225deg);
+}
+
+.information.isFold .btnFold.isFold span::before {
+    margin-left: -4px;
+    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+}
+
+.information .btnFold span:hover {
+    transition: all 0.2s cubic-bezier(.4,.25,.3,1);
+    -webkit-transition: all 0.2s cubic-bezier(.4,.25,.3,1);
+    -moz-transition: all 0.2s cubic-bezier(.4,.25,.3,1);
+    -ms-transition: all 0.2s cubic-bezier(.4,.25,.3,1);
+    -o-transition: all 0.2s cubic-bezier(.4,.25,.3,1);
+}
+
+.information .btnFold span:hover {
+    background: var(--black);
+    border: 1px solid var(--black);
+}
+
+.information .btnFold span:hover::before {
+    border-top: 2px solid var(--white);
+    border-right: 2px solid var(--white);
+}
+
+.information .title {
+    padding: 2rem;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 10px 0;
+}
+
+.information .title h1 {
+    position: absolute;
+    color: var(--white);
+    font-size: 2.0rem;
+    white-space: nowrap;
+}
+
+.information .title h1 span {
+    color: var(--black);
+}
+
+.information .title p {
+    padding: 4rem 0 0;
+    color: var(--text);
+    font-size: 1.0rem;
+}
+
+.information .avatar {
+    height: 400px;
+}
+
+.information .avatar img {
+    height: 100%;
+    object-fit: cover;
+}
+
+.information .about {
+    padding: 4rem 2rem 6rem;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 20px 0;
+}
+
+.information .about:after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 50%;
+    height: 2px;
+    background: var(--white);
+}
+
+.information .about strong {
+    color: var(--white);
+    font-size: 1.6rem;
+}
+.information .about p {
+    color: var(--text);
+    line-height: 1.6rem;
+    word-break: keep-all;
+}
+
+.information footer {
+    padding: 2rem;
+}
+
+.information .social {
+    display: flex;
+    flex-direction: column;
+    gap: 10px 0;
+}
+
+.information .social a {
+    display: flex;
+    align-items: center;
+    gap:0 10px;
+    color: var(--white);
+}
+
+.information .social a:before {
+    content: "";
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 32px;
+    height: 32px;
+}
+
+.information .social .github:before {
+    background: url(/src/assets/images/icon-github-light.png) center no-repeat;
+    background-size: 100% auto;
+}
+
+.information .social .github:hover:before {
+    background: url(/src/assets/images/icon-github-dark.png) center no-repeat;
+    background-size: 100% auto;
+}
+
+.information .social .phone:before {
+    background: url(/src/assets/images/icon-phone-light.png) center no-repeat;
+    background-size: 100% auto;
+}
+
+.information .social .phone:hover:before {
+    background: url(/src/assets/images/icon-phone-dark.png) center no-repeat;
+    background-size: 100% auto;
+}
+
+.information .social .email:before {
+    background: url(/src/assets/images/icon-email-light.png) center no-repeat;
+    background-size: 100% auto;
+}
+
+.information .social .email:hover:before {
+    background: url(/src/assets/images/icon-email-dark.png) center no-repeat;
+    background-size: 100% auto;
+}        
+
+.information .copyright {
+    margin: 2rem 0 0;
+    color: var(--text);
+    font-size: 0.7rem;
+    text-align: center;
+}
+
+@media all and (max-width: 640px) {
+    .information.isFold {
+        position: absolute;
+        top: 0;
+        left: 0;
+        min-width: 100%;
+        max-width: 100%;
+        border-right: none;
+        background: transparent;
+    }
+
+    .information .btnFold {
+        display: none;
+    }
+}

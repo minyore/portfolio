@@ -1,0 +1,192 @@
+
+/**
+ * @author 김 민
+ */
+
+.contents {
+    position: relative;
+    width: 100%;
+    max-width: 960px;
+    flex: 1;
+}
+
+.information.isFold + .contents {
+    max-width: calc(100% - 100px);
+}
+
+#contents {
+    padding: 4rem;
+    overflow-y: auto;
+    overscroll-behavior: auto;
+    max-height: calc(100% - 144px);
+    box-sizing: border-box;
+}
+
+.contents .design {
+    position: relative;
+    padding: 9rem 0 0;
+    display: block;
+}
+
+.contents .design .square {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 3rem;
+    height: 3rem;
+    background: var(--logo);
+}
+
+.contents .design::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background: var(--black);
+}
+
+.contents .design::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 6rem;
+    width: 2px;
+    height: 50%;
+    background: var(--black);
+}
+
+.contents .title::after {
+    content: "";
+    padding: 1rem 0 0;
+    display: flex;
+    width: 100px;
+    border-bottom: 2px solid var(--black);
+}
+
+.contents strong {
+    font-size: 1.6rem;
+}
+
+.contents .education .lists {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem 0;
+}
+
+.contents .lists {
+    margin: 2rem 0 4rem;
+    padding: 0 0 2rem;
+}
+
+.contents .lists strong {
+    display: block;
+    margin: 0 0 1rem;
+    font-size: 1.2rem;
+}
+
+.contents .lists p {
+    margin: 0.25rem 0 0;
+    font-size: 1.0rem;
+    line-height: 1.2rem;
+    word-break: break-all;
+}
+
+.contents .lists .btnMore {
+    margin: 2rem 0 0;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 0 0.5rem;
+    font-size: 1.0rem;
+    line-height: 1rem;
+}
+
+.contents .lists .btnMore:hover {
+    color: var(--text);
+    transition: all 0.3s cubic-bezier(.4,.25,.3,1);
+    -webkit-transition: all 0.3s cubic-bezier(.4,.25,.3,1);
+    -moz-transition: all 0.3s cubic-bezier(.4,.25,.3,1);
+    -ms-transition: all 0.3s cubic-bezier(.4,.25,.3,1);
+    -o-transition: all 0.3s cubic-bezier(.4,.25,.3,1);
+}
+
+.contents .lists .btnMore:hover::before {
+    content: "→";
+}
+
+.contents .lists .labelGroup {
+    margin: 1rem 0 0;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 0 0.4rem;
+}
+
+.contents .lists .label {
+    padding: 0.2rem 0.4rem;
+    font-size: 0.8rem;
+    border-radius: 4px;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    -ms-border-radius: 4px;
+    -o-border-radius: 4px;
+}
+
+.contents .lists .label.html {
+    color: var(--white);
+    background: var(--html);
+}
+
+.contents .lists .label.css {
+    color: var(--white);
+    background: var(--css);
+}
+
+.contents .lists .label.javascript {
+    color: var(--white);
+    background: var(--javascript);
+}
+
+.contents .lists .label.jquery {
+    color: var(--white);
+    background: var(--jquery);
+}
+
+.contents .lists .label.vue {
+    color: var(--white);
+    background: var(--vue);
+}
+
+.contents .lists .label.svn {
+    color: var(--white);
+    background: var(--svn);
+}
+
+.contents .lists .label.git {
+    color: var(--white);
+    background: var(--git);
+}
+
+.contents .lists .label.rank {
+    color: var(--white);
+    background: var(--logo);
+}
+
+.contents .lists .label.team {
+    color: var(--white);
+    background: var(--label);
+}
+
+@media all and (max-width: 640px) {
+    .information.isFold + .contents {
+        max-width: 100%;
+    }
+
+    #contents {
+        padding: 3rem 2rem;
+    }
+
+    .contents .design {
+        padding: 6rem 0 0;
+    }
+}

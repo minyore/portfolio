@@ -1,0 +1,88 @@
+
+/**
+ * @author 김 민
+ */
+
+@import url(normalize.css);
+@import url(fonts.css);
+@import url(variables.css);
+@import url(information.css);
+@import url(contents.css);
+
+::selection { 
+    background-color: var(--logo);
+}
+
+.container {
+    margin: 0 auto;
+    position: relative;
+    max-width: 100%;
+}
+
+.portfolio {
+    margin: 0 auto;
+    display: flex;
+    max-width: 1280px;
+    height: auto;
+}
+
+/* modal */
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: var(--dimmed);
+    z-index: 10;
+}
+
+.modalLayer {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-left: -250px;
+    transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    -o-transform: translateY(-50%);
+    width: 500px;
+    height: 500px;
+    background: var(--white);
+    border-radius: 8px;
+}
+
+.modalLayer .modalHead {
+    padding: 2rem 1rem;
+    position: relative;
+    text-align: center;
+}
+
+.modalLayer .modalHead strong {
+    font-size: 1.4rem;
+}
+
+.modalLayer .modalHead .modalClose {
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+}
+
+.modalLayer .modalBody {
+    padding: 2rem 1rem;
+    position: relative;
+}
+
+@media all and (max-width: 640px) {
+    .portfolio {
+        flex-direction: column;
+        max-width: 100%;
+    }
+}

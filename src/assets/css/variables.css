@@ -1,0 +1,21 @@
+
+/**
+ * @author 김 민
+ */
+
+:root {
+    --dimmed: rgba(0, 0, 0, 0.5);
+    --black: #000;
+    --white: #fff;
+    --background: #f9f9f9;
+    --logo: #fcce00;
+    --text: #d9d9d9;
+    --html: #F1662A;
+    --css: #24ABE0;
+    --javascript: #F1C021;
+    --jquery: #00CEF5;
+    --vue: #3FB984;
+    --svn: #809DC9;
+    --git: #F05133;
+    --label: #00AEEF;
+}
