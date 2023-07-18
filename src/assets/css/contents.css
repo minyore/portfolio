@@ -12,6 +12,7 @@
 
 .information.isFold + .contents {
     max-width: calc(100% - 100px);
+    border-right: 1px solid var(--background-2);
 }
 
 #contents {

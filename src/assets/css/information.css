@@ -28,6 +28,7 @@
 .information.isFold {
     min-width: 100px;
     max-width: 100px;
+    border-left: 1px solid var(--background-2);
     border-right: 2px solid var(--black);
     background: var(--background);
 }
