@@ -2,10 +2,6 @@
  * @author 김 민
  */
 
-$(document).ready(function(){
-	init();
-});
-
 function init(){
 	informationLoad();
 	contentsLoad();
