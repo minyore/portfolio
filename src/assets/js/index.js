@@ -18,17 +18,17 @@ function heightResize(){
 
 // information component load
 function informationLoad(){
-	$("#information").load("/src/components/information/information.html");
+	$("#information").load("https://minyore.github.io/portfolio/src/components/information/information.html");
 }
 
 // contents component load
 function contentsLoad(){
-	$("#contents").load("/src/components/contents/contents.html");
+	$("#contents").load("https://minyore.github.io/portfolio/src/components/contents/contents.html");
 }
 
 // modal component load
 function modalsLoad(){
-	$("#modals").load("/src/components/modal/index.html");
+	$("#modals").load("https://minyore.github.io/portfolio/src/components/modal/index.html");
 }
 
 // information fold
