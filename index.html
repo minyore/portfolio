@@ -31,6 +31,18 @@
         <!-- import -->
         <link rel="stylesheet" href="https://minyore.github.io/portfolio/src/assets/css/index.css" />
         <script src="https://minyore.github.io/portfolio/src/assets/js/index.js"></script>
+
+        <script>
+            // user device check
+            const desktop = "win16|win32|win64|macintel|mac";
+
+            if(desktop.indexOf(navigator.platform.toLowerCase()) < 0 ) {
+                document.querySelector("html").classList.add("mobile");
+            }
+            else {
+                document.querySelector("html").classList.add("desktop");
+            }
+        </script>
     </head>
 
     <body>
