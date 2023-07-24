@@ -218,32 +218,32 @@
 }
 
 .information .social .github:before {
-    background: url(https://minyore.github.io/portfolio/src/assets/images/icon-github-light.png) center no-repeat;
-    background-size: 38px;
-}
-
-.information .social .github:hover:before {
     background: url(https://minyore.github.io/portfolio/src/assets/images/icon-github-dark.png) center no-repeat;
     background-size: 38px;
 }
 
-.information .social .phone:before {
-    background: url(https://minyore.github.io/portfolio/src/assets/images/icon-phone-light.png) center no-repeat;
-    background-size: 100% auto;
+.information .social .github:hover:before {
+    background: url(https://minyore.github.io/portfolio/src/assets/images/icon-github-light.png) center no-repeat;
+    background-size: 38px;
 }
 
-.information .social .phone:hover:before {
+.information .social .phone:before {
     background: url(https://minyore.github.io/portfolio/src/assets/images/icon-phone-dark.png) center no-repeat;
     background-size: 100% auto;
 }
 
+.information .social .phone:hover:before {
+    background: url(https://minyore.github.io/portfolio/src/assets/images/icon-phone-light.png) center no-repeat;
+    background-size: 100% auto;
+}
+
 .information .social .email:before {
-    background: url(https://minyore.github.io/portfolio/src/assets/images/icon-email-light.png) center no-repeat;
+    background: url(https://minyore.github.io/portfolio/src/assets/images/icon-email-dark.png) center no-repeat;
     background-size: 38px;
 }
 
 .information .social .email:hover:before {
-    background: url(https://minyore.github.io/portfolio/src/assets/images/icon-email-dark.png) center no-repeat;
+    background: url(https://minyore.github.io/portfolio/src/assets/images/icon-email-light.png) center no-repeat;
     background-size: 38px;
 }        
 
